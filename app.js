@@ -49,7 +49,7 @@ app.get("/", function(req, res){
     console.log(code);
     
     var headers = {
-        'Access-Token': 'o.EEDvwjlHeJ5xgAzYGHY7mAK7dUHlpwJj',
+        'Access-Token': '<your_pushbullet_access_token_here>',
         'Content-Type': 'application/json'
     };
     var dataString = '{"client_id":"12mqTAUtJjStnPP3j49V905Vd5aFfsxR","client_secret":"7b4RKMpjFlYJXWfceMEXmn5SSlrfvJsM","code":\"'+code+'\","grant_type":"authorization_code"}';
