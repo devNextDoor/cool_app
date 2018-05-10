@@ -75,7 +75,7 @@ app.get("/", function(req, res){
 
 app.get("/cool", function(req, res){
         console.log(req.url);
-        request("https://newsapi.org/v2/top-headlines?country=in&apiKey=b3712c5d9992406aa5c0c5d396000915", function(error, response, body){
+        request("https://newsapi.org/v2/top-headlines?country=in&apiKey=<news_api_key_here>", function(error, response, body){
             if(!error && response.statusCode==200){
                 var articles = JSON.parse(body).articles;
                 res.render("cool.ejs", {articles : articles, holidays : ret, client_access_token : client_access_token, name : name});
@@ -84,7 +84,7 @@ app.get("/cool", function(req, res){
 });
 
 app.get("/coola", function(req, res) {
-    request("https://newsapi.org/v2/top-headlines?country=in&apiKey=b3712c5d9992406aa5c0c5d396000915", function(error, response, body){
+    request("https://newsapi.org/v2/top-headlines?country=in&apiKey=<news_api_key_here>", function(error, response, body){
             if(!error && response.statusCode==200){
                 var articles = JSON.parse(body).articles;
                 res.render("coola.ejs", {articles : articles, holidays : ret, client_access_token : client_access_token, name : name});
